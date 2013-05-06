@@ -16,6 +16,8 @@ p {color:blue;}
 <tr><td>Employee Salary: </td><td><input type='text' name='emp_salary'</td></tr>
 <tr><td colspan = "2" align="right"> <input type="submit" value="Create Employee"></td></tr></table></form>";
 </form></p>
+"<br><br><a href='showemployees.php'><h3>Show Employees</h3></a>";
+
  </body>
  </html> 
 
