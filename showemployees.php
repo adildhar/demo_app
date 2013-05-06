@@ -1,5 +1,4 @@
 <?php
-$username = $_POST['username']; 
 $config = require 'config/local.config.php';
 $dbconfig = $config['db_master'];
 $hostname = $dbconfig['host'];
