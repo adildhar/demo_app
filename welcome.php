@@ -5,7 +5,7 @@ $hostname = $dbconfig['host'];
 $dbname = $dbconfig['dbname'];
 $user = $dbconfig['user'];
 $pass = $dbconfig['pass'];
-mysql_connect("$hostname","$user","$pass");
+mysql_connect("$hostname","$user","$pass","dbname");
 if (mysqli_connect_errno())
    {
    echo "Failed to connect to MySQL: " . mysqli_connect_error();
