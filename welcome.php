@@ -17,7 +17,7 @@ echo "<table border='1'> <tr> <th>Employee ID</th> <th>Employee Name</th> <th>Ad
 while($row = mysqli_fetch_array($result))
    {
    echo "<tr>";
-   echo "<td>" . $row['emp_ID'] . "</td>";
+   echo "<td>" . $row['emp_id'] . "</td>";
    echo "<td>" . $row['emp_name'] . "</td>";
    echo "<td>" . $row['emp_address'] . "</td>";
    echo "<td>" . $row['emp_email'] . "</td>";
