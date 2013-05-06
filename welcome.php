@@ -5,12 +5,11 @@ $hostname = $dbconfig['host'];
 $db = $dbconfig['dbname'];
 $user = $dbconfig['user'];
 $pass = $dbconfig['pass'];
-mysql_connect("$hostname","$user","$pass","$db");
+$con=mysql_connect("$hostname","$user","$pass","$db");
 if (mysqli_connect_errno())
    {
    echo "Failed to connect to MySQL: " . mysqli_connect_error();
    }
-
 
 $result = mysqli_query($con,"SELECT * FROM employee");
 echo "Connected to Employee Database";
