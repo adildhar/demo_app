@@ -17,6 +17,7 @@ $sql = "INSERT INTO employee(emp_id, emp_name, emp_address, emp_email, emp_salar
 $result = mysql_query($sql);
 mysql_close($db_handle);
 print "Records added to the database";
+echo "<br><br><a href='empform.php'>Go back</a>";
 }
  else {
 print "Database NOT Found ";
