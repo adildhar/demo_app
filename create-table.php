@@ -14,7 +14,7 @@ p {color:blue;}
 <tr><td>Employee Address: </td><td><input type='text' name='emp_address'></td></tr>
 <tr><td>Employee Email: </td><td><input type='text' name='emp_email'</td></tr>
 <tr><td>Employee Salary: </td><td><input type='text' name='emp_salary'</td>/tr>
-<tr><td colspan = "2" align="right"> <input type="submit" value="Login"></td></tr></table></form>";
+<tr><td colspan = "2" align="right"> <input type="submit" value="Create Employee"></td></tr></table></form>";
 </form></p>
  </body>
  </html> 
