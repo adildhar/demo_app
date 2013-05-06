@@ -19,7 +19,8 @@ if (mysqli_connect_errno())
 else
 {
 $sql = 'INSERT INTO employee(emp_id, emp_name, emp_address, emp_email, emp_salary) VALUES (" ","$emp_name","$emp_address","$emp_email","$emp_salary")';
-$retval = mysql_query( $sql, $con );
+$retval = mysqli_query( $sql, $con );
+echo '$sql';
 if(! $retval )
 {
   die('Could not enter data: ' . mysql_error());
