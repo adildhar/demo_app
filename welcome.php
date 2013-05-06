@@ -16,12 +16,12 @@ $uvalue =mysqli_fetch_array($check);
 if ($uvalue = "$username")
 {
 echo "<h1> Welcome to Employee Records Database</h1>";
-echo "<href link='showemployees.php'>show Employee Records</href>";
-echo "<href link='createrecord.php'>Create Employee Record</href>";
+echo "<a href='showemployees.php'>show Employee Records</a><br>";
+echo "<a href='createrecord.php'>Create Employee Record</a><br>";
 }
 else
 {
 echo "Login Incorrect! Please try again";
-echo "<href link='index.php'>Go Back</href>";
+echo "<br><br><a href='index.php'>Go Back</a>";
 }
 ?>
