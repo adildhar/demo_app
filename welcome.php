@@ -18,7 +18,7 @@ if ($uvalue = "$username")
 echo "<html><head><body align='center'><h1>Welcome to Employee Database System</h1>";
 echo "<table border='1', align='center'><tr> <th><font color='red'>Quick Tasks</font></th></tr>";
 echo "<tr><th><a href='showemployees.php'>show Employee Records</a><th></tr>";
-echo "<tr><th><a href='create-table.php'>Create Employee Record</a></th></tr></table></body></html>";
+echo "<tr><th><a href='empform.php'>Create Employee Record</a></th></tr></table></body></html>";
 }
 else
 {
