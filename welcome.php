@@ -19,7 +19,7 @@ $check = mysqli_query($con,"SELECT user_name FROM user where user_name='$usernam
 $uvalue =mysqli_fetch_array($check); 
 echo $check;
 echo $uvalue;
-if ($uvalue = "$username")  
+if ($uvalue == $username)  
 {
 echo "<html><head><body align='center'><h1>Welcome to Employee Database System</h1>";
 echo "<table border='1', align='center'><tr> <th><font color='red'>Quick Tasks</font></th></tr>";
