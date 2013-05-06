@@ -16,7 +16,9 @@ if (mysqli_connect_errno())
 else
 {
 $check = mysqli_query($con,"SELECT user_name FROM user where user_name='$username'") or die(mysql_error());   
-$uvalue =mysqli_fetch_array($check);  
+$uvalue =mysqli_fetch_array($check); 
+echo $check;
+echo $uvalue;
 if ($uvalue = "$username")  
 {
 echo "<html><head><body align='center'><h1>Welcome to Employee Database System</h1>";
