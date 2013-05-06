@@ -18,7 +18,7 @@ if ($uvalue = "$username")
 echo "<h1> Welcome to Employee Records Database</h1>";
 echo "<href link='showemployees.php'>show Employee Records</href>";
 echo "<href link='createrecord.php'>Create Employee Record</href>";
-
+}
 else
 {
 echo "Login Incorrect! Please try again";
