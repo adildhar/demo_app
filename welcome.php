@@ -17,7 +17,7 @@ if ($uvalue = "$username")
 {
 $result = mysqli_query($con,"SELECT * FROM employee");
 echo "Connected to Employee Database";
-echo "<table border='1', align='center'><tr> <th><font color='red'>Employee ID</font></th> <th>Employee Name</th> <th>Address</th> <th>Email</th> <th>Salary</th></tr>";
+echo "<table border='1', align='center'><tr> <th><font color='red'>Employee ID</font></th> <th><font color='red'>Employee Name</font></th> <th><font color='red'>Address</font></th> <th><font color='red'>Email</font></th> <th><font color='red'>Salary</font></th></tr>";
 while($row = mysqli_fetch_array($result))
    {
    echo "<tr>";
