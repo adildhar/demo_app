@@ -15,8 +15,8 @@ if (mysqli_connect_errno())
    }
 else
 {
-$check = mysqli_query($con,"SELECT user_name FROM user where user_name='$username'") or die(mysql_error()); 
-$uvalue =mysqli_fetch_array($check); 
+$sql = mysqli_query($con,"SELECT user_name FROM user where user_name='$username'") or die(mysql_error()); 
+$uvalue =mysqli_fetch_array($sql); 
 echo $uvalue;
 if ($uvalue == $username)  
 {
