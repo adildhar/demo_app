@@ -1,15 +1,41 @@
 <?php
-// Read the config and set up the database connection
 $config = require 'config/local.config.php';
 $dbconfig = $config['db_master'];
-$pdo = new PDO('mysql:host=' . $dbconfig['host'] . ';dbname=' . $dbconfig['dbname'], $dbconfig['user'], $dbconfig['pass']);
+$hostname = $dbconfig['host'];
+$dbname = $dbconfig['dbname'];
+$user = $dbconfig['user'];
+$pass = $dbconfig['pass'];
+mysql_connect("$hostname","$user","$pass");
+if (mysqli_connect_errno())
+   {
+   echo "Failed to connect to MySQL: " . mysqli_connect_error();
+   }
 
-// Make sure we have access to the database for this application
-$result = $pdo->query('Select * from user where user_name='$username');
 
-if (1 === $result->rowCount()) {
-    echo '<div style="color:darkgreen; font-size: xx-large;">OK!</div> I can see the application database.';
-} else {
-    echo '<div style="color:red; font-size: xx-large;">Whoops!</div> I can\'t see the application database.';
-}
+$result = mysqli_query($con,"SELECT * FROM employee");
+
+ echo "<table border='1'>
+ <tr>
+ <th>Employee ID</th>
+ <th>Employee Name</th>
+ <th>Address</th>
+ <th>Email</th>
+ <th>Salary</th>
+ </tr>";
+
+ while($row = mysqli_fetch_array($result))
+   {
+   echo "<tr>";
+   echo "<td>" . $row['emp_ID'] . "</td>";
+   echo "<td>" . $row['emp_name'] . "</td>";
+   echo "<td>" . $row['emp_address'] . "</td>";
+   echo "<td>" . $row['emp_email'] . "</td>";
+   echo "<td>" . $row['emp_salary'] . "</td>";
+   echo "</tr>";
+   }
+ echo "</table>";
+
+ mysqli_close($con);
+mysql_query("Select * from user where user_name='$username'")or die(mysql_error()); 
+echo "Connected to Employee Database";
 ?>
