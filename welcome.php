@@ -15,21 +15,13 @@ $check = mysqli_query($con,"SELECT user_name FROM user where user_name='$usernam
 $uvalue =mysqli_fetch_array($check);
 if ($uvalue = "$username")
 {
-$result = mysqli_query($con,"SELECT * FROM employee");
-echo "<html><head><body align='center'><h1>Connected to Employee Database</h1>";
-echo "<table border='1', align='center'><tr> <th><font color='red'>Employee ID</font></th> <th><font color='red'>Employee Name</font></th> <th><font color='red'>Address</font></th> <th><font color='red'>Email</font></th> <th><font color='red'>Salary</font></th></tr>";
-while($row = mysqli_fetch_array($result))
-   {
-   echo "<tr>";
-   echo "<td>" . $row['emp_id'] . "</td>";
-   echo "<td>" . $row['emp_name'] . "</td>";
-   echo "<td>" . $row['emp_address'] . "</td>";
-   echo "<td>" . $row['emp_email'] . "</td>";
-   echo "<td>" . $row['emp_salary'] . "</td>";
-   echo "</tr>";
-   }
- echo "</table>";
- echo "</body></html>";
- mysqli_close($con);
+echo "<h1> Welcome to Employee Records Database</h1>";
+echo "<href link='showemployees.php'>show Employee Records</href>;
+echo "<href link='createrecord.php'>Create Employee Record</href>;
+?>
+else
+{
+echo "Login Incorrect! Please try again";
+echo "<href link='index.php'>Go Back</href>";
 }
 ?>
