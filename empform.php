@@ -8,7 +8,7 @@ p {color:blue;}
 </head>
  <body>
 <h1 align="center">Create Record in Employee Database Application! ------ Running on LAMP</h1><br><br>
-<p><form action="addrecord.php" method="post"><br>
+<p><form action="newentry.php" method="post"><br>
 <table border='1' align='center'>
 <tr><td>Employee Name: </td><td><input type='text' name='emp_name'></td></tr>
 <tr><td>Employee Address: </td><td><input type='text' name='emp_address'></td></tr>
