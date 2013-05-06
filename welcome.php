@@ -15,9 +15,10 @@ $check = mysqli_query($con,"SELECT user_name FROM user where user_name='$usernam
 $uvalue =mysqli_fetch_array($check);
 if ($uvalue = "$username")
 {
-echo "<h1> Welcome to Employee Records Database</h1>";
-echo "<a href='showemployees.php'>show Employee Records</a><br>";
-echo "<a href='createrecord.php'>Create Employee Record</a><br>";
+echo "<html><head><body align='center'><h1>Welcome to Employee Database System</h1>";
+echo "<table border='1', align='center'><tr> <th><font color='red'>Quick Tasks</font></th></tr>";
+echo "<tr><th><a href='showemployees.php'>show Employee Records</a><th></tr>";
+echo "<tr><th><a href='createrecord.php'>Create Employee Record</a></th></tr></table></body></html>";
 }
 else
 {
