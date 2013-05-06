@@ -2,10 +2,10 @@
 $config = require 'config/local.config.php';
 $dbconfig = $config['db_master'];
 $hostname = $dbconfig['host'];
-$dbname = $dbconfig['dbname'];
+$db = $dbconfig['dbname'];
 $user = $dbconfig['user'];
 $pass = $dbconfig['pass'];
-mysql_connect("$hostname","$user","$pass","dbname");
+mysql_connect("$hostname","$user","$pass","$db");
 if (mysqli_connect_errno())
    {
    echo "Failed to connect to MySQL: " . mysqli_connect_error();
