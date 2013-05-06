@@ -1,10 +1,10 @@
 <!DOCTYPE html>
  <html>
  <body>
-<h1>Hello this is Demo Employee Application! ------ Running on LAMP</h1>
-<form action="welcome.php" method="post">
- Name: <input type="text" name="username">
- Password: <input type="password" name="password">
+<h1>Hello this is Demo Employee Application! ------ Running on LAMP</h1>!<br><br>
+<form action="welcome.php" method="post">!<br>
+ Name: <input type="text" name="username">!<br>
+ Password: <input type="password" name="password">!<br><br>
  <input type="submit" name="Login">
  </form>
  </body>
