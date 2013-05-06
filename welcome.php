@@ -1,4 +1,5 @@
 <?php
+$username = $_POST['username']; 
 $config = require 'config/local.config.php';
 $dbconfig = $config['db_master'];
 $hostname = $dbconfig['host'];
@@ -10,7 +11,10 @@ if (mysqli_connect_errno())
    {
    echo "Failed to connect to MySQL: " . mysqli_connect_error();
    }
-
+$check = mysqli_query($con,"SELECT user_name FROM user where user_name='$username'") or die(mysql_error()); 
+$uvalue =mysqli_fetch_array($check);
+if ($uvalue = "$username")
+{
 $result = mysqli_query($con,"SELECT * FROM employee");
 echo "Connected to Employee Database";
 echo "<table border='1'> <tr> <th>Employee ID</th> <th>Employee Name</th> <th>Address</th> <th>Email</th> <th>Salary</th></tr>";
@@ -26,4 +30,5 @@ while($row = mysqli_fetch_array($result))
    }
  echo "</table>";
  mysqli_close($con);
+}
 ?>
