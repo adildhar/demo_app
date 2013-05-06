@@ -12,7 +12,7 @@ $con=mysqli_connect("$hostname","$user","$pass","$db");
 if (mysqli_connect_errno())
    {
    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-   echo "<a href="index.php">Login Again</a>;
+   echo "<a href='index.php'>Login Again</a>;
    }
 else
 {
