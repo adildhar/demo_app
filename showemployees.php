@@ -30,5 +30,4 @@ while($row = mysqli_fetch_array($result))
  echo "</body></html>";
  mysqli_close($con);
 }
-echo "<br><br><a href='welcome.php'>Go Back</a>";
 ?>
