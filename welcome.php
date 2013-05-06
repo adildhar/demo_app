@@ -13,17 +13,9 @@ if (mysqli_connect_errno())
 
 
 $result = mysqli_query($con,"SELECT * FROM employee");
-
- echo "<table border='1'>
- <tr>
- <th>Employee ID</th>
- <th>Employee Name</th>
- <th>Address</th>
- <th>Email</th>
- <th>Salary</th>
- </tr>";
-
- while($row = mysqli_fetch_array($result))
+echo "Connected to Employee Database";
+echo "<table border='1'> <tr> <th>Employee ID</th> <th>Employee Name</th> <th>Address</th> <th>Email</th> <th>Salary</th></tr>";
+while($row = mysqli_fetch_array($result))
    {
    echo "<tr>";
    echo "<td>" . $row['emp_ID'] . "</td>";
@@ -34,8 +26,5 @@ $result = mysqli_query($con,"SELECT * FROM employee");
    echo "</tr>";
    }
  echo "</table>";
-
  mysqli_close($con);
-mysql_query("Select * from user where user_name='$username'")or die(mysql_error()); 
-echo "Connected to Employee Database";
 ?>
