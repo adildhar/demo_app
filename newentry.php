@@ -9,23 +9,19 @@ $hostname = $dbconfig['host'];
 $db = $dbconfig['dbname'];
 $user = $dbconfig['user'];
 $pass = $dbconfig['pass'];
-$con=mysqli_connect("$hostname","$user","$pass","$db");
-if (mysqli_connect_errno())
-   {
-   echo "Failed to connect to MySQL: " . mysqli_connect_error();
-   echo "Login Incorrect! Please try again";
-   echo "<br><br><a href='index.php'>Go Back</a>";
-   }
-else
-{
-$sql = "INSERT INTO employee(emp_id, emp_name, emp_address, emp_email, emp_salary) VALUES (' ','$emp_name','$emp_address','$emp_email','$emp_salary');";
-$retval = mysqli_query( $sql, $con );
-echo $sql;
-if(! $retval )
-{
-  die('Could not enter data: ' . mysql_error());
+
+$db_handle = mysql_connect($hostname, $user, $pass);
+$db_found = mysql_select_db($db, $db_handle);
+if ($db_found) {
+$sql = "INSERT INTO employee(emp_id, emp_name, emp_address, emp_email, emp_salary) VALUES (' ','$emp_name','$emp_address','$emp_email','$emp_salary')";
+$result = mysql_query($sql);
+mysql_close($db_handle);
+print "Records added to the database";
 }
-echo "Entered data successfully\n";
-mysql_close($conn);
+ else {
+print "Database NOT Found ";
+echo "Login Incorrect! Please try again";
+echo "<br><br><a href='index.php'>Go Back</a>";
+ mysql_close($db_handle);
 }
 ?>
