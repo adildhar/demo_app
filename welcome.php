@@ -1,8 +1,10 @@
 <?php
 $username = $_POST['username']; 
 $config = require 'config/local.config.php';
-$dbconfig = $config['db_master'];
+if($config['dbmaster'] OR $config['dbslave']) 
+{
 $hostname = $dbconfig['host'];
+}
 $db = $dbconfig['dbname'];
 $user = $dbconfig['user'];
 $pass = $dbconfig['pass'];
