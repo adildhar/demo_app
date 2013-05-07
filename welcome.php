@@ -5,6 +5,11 @@ if($dbconfig = $config['db_master'])
 {
 $hostname = $dbconfig['host'];
 }
+else
+{
+$dbconfig = $config['db_slave'];
+$hostname = $dbconfig['host'];
+}
 $db = $dbconfig['dbname'];
 $user = $dbconfig['user'];
 $pass = $dbconfig['pass'];
