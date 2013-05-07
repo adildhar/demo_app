@@ -3,6 +3,7 @@ $username = $_POST['username'];
 $config = require 'config/local.config.php';
 if($config['db_master']) 
 {
+$dbconfig = $config['db_master']
 $hostname = $dbconfig['host'];
 }
 $db = $dbconfig['dbname'];
