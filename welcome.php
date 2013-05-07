@@ -1,22 +1,11 @@
 <?php
 $username = $_POST['username']; 
 $config = require 'config/local.config.php';
-if ($config['dbmaster'])
-{
-   $dbconfig = $config['db_master'];
-   
-}
-else
-{
-   $dbconfig = $config['db_slave'];
-}
+$dbconfig = $config['db_master'];
 $hostname = $dbconfig['host'];
 $db = $dbconfig['dbname'];
 $user = $dbconfig['user'];
 $pass = $dbconfig['pass'];
-echo $hostname;
-echo $db;
-echo $user;
 $con=mysqli_connect("$hostname","$user","$pass","$db");
 if (mysqli_connect_errno())
    {
