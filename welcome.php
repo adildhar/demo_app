@@ -14,6 +14,9 @@ $hostname = $dbconfig['host'];
 $db = $dbconfig['dbname'];
 $user = $dbconfig['user'];
 $pass = $dbconfig['pass'];
+echo $hostname;
+echo $db;
+echo $user;
 $con=mysqli_connect("$hostname","$user","$pass","$db");
 if (mysqli_connect_errno())
    {
