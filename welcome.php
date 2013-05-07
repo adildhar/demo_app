@@ -4,15 +4,18 @@ $config = require 'config/local.config.php';
 if($dbconfig = $config['db_master'])
 {
 $hostname = $dbconfig['host'];
+$db = $dbconfig['dbname'];
+$user = $dbconfig['user'];
+$pass = $dbconfig['pass'];
 }
 else
 {
 $dbconfig = $config['db_slave'];
 $hostname = $dbconfig['host'];
-}
 $db = $dbconfig['dbname'];
 $user = $dbconfig['user'];
 $pass = $dbconfig['pass'];
+}
 $con=mysqli_connect("$hostname","$user","$pass","$db");
 if (mysqli_connect_errno())
    {
