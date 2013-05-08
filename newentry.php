@@ -4,12 +4,21 @@ $emp_address = $_POST['emp_address'];
 $emp_email = $_POST['emp_email'];
 $emp_salary = $_POST['emp_salary'];
 $config = require 'config/local.config.php';
-$dbconfig = $config['db_master'];
+if($dbconfig = $config['db_master'])
+{
 $hostname = $dbconfig['host'];
 $db = $dbconfig['dbname'];
 $user = $dbconfig['user'];
 $pass = $dbconfig['pass'];
-
+}
+else
+{
+$dbconfig = $config['db_slave'];
+$hostname = $dbconfig['host'];
+$db = $dbconfig['dbname'];
+$user = $dbconfig['user'];
+$pass = $dbconfig['pass'];
+}
 $db_handle = mysql_connect($hostname, $user, $pass);
 $db_found = mysql_select_db($db, $db_handle);
 if ($db_found) {
